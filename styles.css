@@ -18,6 +18,12 @@ body {
     overflow-x: hidden;
 }
 
+@media (max-width: 768px) {
+    body {
+        padding: 0;
+    }
+}
+
 /* Container */
 .container {
     max-width: 800px;
@@ -58,18 +64,29 @@ body {
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
     will-change: transform;
+    image-rendering: -webkit-optimize-contrast;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 @media (max-width: 768px) {
     .invitation-card {
         margin-bottom: 10px;
         padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        width: 100vw;
+        margin-left: calc(-50vw + 50%);
+        margin-right: calc(-50vw + 50%);
     }
     
     .invitation-image {
         border-radius: 0;
-        width: 100vw;
+        width: 100%;
         max-width: none;
+        display: block;
     }
 }
 
@@ -97,18 +114,28 @@ body {
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
     will-change: transform;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 @media (max-width: 768px) {
     .decoration {
         margin: 10px 0;
         padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        width: 100vw;
+        margin-left: calc(-50vw + 50%);
+        margin-right: calc(-50vw + 50%);
     }
     
     .decoration-image {
         border-radius: 0;
-        width: 100vw;
+        width: 100%;
         max-width: none;
+        display: block;
     }
 }
 
