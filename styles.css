@@ -301,7 +301,6 @@ body {
     box-sizing: border-box;
     scrollbar-width: thin;
     scrollbar-color: #E3674E #f1f1f1;
-    text-align: center;
 }
 
 .modal-content::-webkit-scrollbar {
@@ -349,13 +348,13 @@ body {
     font-size: 26px;
     font-family: 'Poppins', 'Arial', sans-serif;
     font-weight: 700;
-    text-align: left;
+    text-align: left !important;
 }
 
 .modal-content p {
     margin-bottom: 20px;
     color: #666;
-    text-align: left;
+    text-align: left !important;
 }
 
 /* RSVP options */
