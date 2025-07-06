@@ -344,7 +344,7 @@ body {
 
 .modal-content h3 {
     color: #E3674E;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     font-size: 26px;
     font-family: 'Poppins', 'Arial', sans-serif;
     font-weight: 700;
@@ -589,7 +589,7 @@ body {
 
 .form-group input:valid,
 .form-group select:valid {
-    border-color: #4CAF50;
+    border-color: #B4D4FB;
 }
 
 /* Responsive form styles */
