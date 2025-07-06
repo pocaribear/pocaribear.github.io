@@ -349,11 +349,13 @@ body {
     font-size: 26px;
     font-family: 'Poppins', 'Arial', sans-serif;
     font-weight: 700;
+    text-align: left;
 }
 
 .modal-content p {
     margin-bottom: 20px;
     color: #666;
+    text-align: left;
 }
 
 /* RSVP options */
