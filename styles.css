@@ -63,8 +63,9 @@ body {
     transform: translateZ(0);
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
-    will-change: transform;
-    image-rendering: -webkit-optimize-contrast;
+    shape-rendering: geometricPrecision;
+    text-rendering: geometricPrecision;
+    image-rendering: optimizeQuality;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -108,12 +109,13 @@ body {
     max-width: 100%;
     height: auto;
     border-radius: 10px;
-    image-rendering: -webkit-optimize-contrast;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
-    will-change: transform;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    shape-rendering: geometricPrecision;
+    text-rendering: geometricPrecision;
+    image-rendering: optimizeQuality;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
