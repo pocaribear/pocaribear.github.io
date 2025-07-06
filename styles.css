@@ -301,6 +301,7 @@ body {
     box-sizing: border-box;
     scrollbar-width: thin;
     scrollbar-color: #E3674E #f1f1f1;
+    text-align: center;
 }
 
 .modal-content::-webkit-scrollbar {
@@ -395,7 +396,7 @@ body {
 
 .form-group {
     margin-bottom: 20px;
-    text-align: left;
+    text-align: left; /* Keep form labels and inputs left-aligned */
 }
 
 .form-group label {
@@ -432,7 +433,8 @@ body {
 
 .form-actions {
     margin-top: 30px;
-    text-align: center;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .submit-button {
