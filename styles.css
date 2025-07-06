@@ -66,6 +66,12 @@ body {
     max-width: 100%;
     height: auto;
     border-radius: 10px;
+    image-rendering: -webkit-optimize-contrast;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    will-change: transform;
 }
 
 /* Action buttons */
