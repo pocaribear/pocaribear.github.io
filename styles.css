@@ -119,6 +119,7 @@ body {
     gap: 15px;
     justify-content: center;
     margin: 40px 0;
+    width: 100%;
 }
 
 .button {
@@ -132,6 +133,8 @@ body {
     transition: all 0.3s ease;
     cursor: pointer;
     border: 3px solid transparent;
+    flex: 1;
+    max-width: 250px;
     min-width: 200px;
     text-align: center;
     text-transform: uppercase;
