@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- Top half (red) -->
+  <path d="M16 0C7.163 0 0 7.163 0 16h32C32 7.163 24.837 0 16 0z" fill="#e74c3c"/>
+  
+  <!-- Bottom half (white) -->
+  <path d="M0 16c0 8.837 7.163 16 16 16s16-7.163 16-16H0z" fill="#ffffff"/>
+  
+  <!-- Center line (dark) -->
+  <rect x="0" y="14" width="32" height="4" fill="#2c3e50"/>
+  
+  <!-- Center circle (white with dark border) -->
+  <circle cx="16" cy="16" r="6" fill="#ffffff" stroke="#2c3e50" stroke-width="2"/>
+  
+  <!-- Inner circle detail -->
+  <circle cx="16" cy="16" r="3" fill="none" stroke="#34495e" stroke-width="1"/>
+</svg>

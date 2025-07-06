@@ -1,1 +1,183 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Susan & Chris - Baby Shower Invitation</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Initial Pokeball Loading Screen -->
+    <div id="pokeballLoader" class="pokeball-loader">
+        <div class="main-pokeball" id="mainPokeball">
+            <div class="center-line"></div>
+            <div class="center-circle"></div>
+        </div>
+        <div class="tap-me-text">Tap Me!</div>
+    </div>
+
+    <!-- Pokeball Animation Background -->
+    <div class="pokeball-container" id="pokeballBackground" style="display: none;">
+        <div class="pokeball variant-1" style="left: 5%;">
+            <div class="center-line"></div>
+            <div class="center-circle"></div>
+        </div>
+        <div class="pokeball variant-2" style="left: 15%;">
+            <div class="center-line"></div>
+            <div class="center-circle"></div>
+        </div>
+        <div class="pokeball variant-3" style="left: 25%;">
+            <div class="center-line"></div>
+            <div class="center-circle"></div>
+        </div>
+        <div class="pokeball variant-4" style="left: 35%;">
+            <div class="center-line"></div>
+            <div class="center-circle"></div>
+        </div>
+        <div class="pokeball variant-5" style="left: 45%;">
+            <div class="center-line"></div>
+            <div class="center-circle"></div>
+        </div>
+        <div class="pokeball variant-6" style="left: 55%;">
+            <div class="center-line"></div>
+            <div class="center-circle"></div>
+        </div>
+        <div class="pokeball variant-1" style="left: 65%;">
+            <div class="center-line"></div>
+            <div class="center-circle"></div>
+        </div>
+        <div class="pokeball variant-2" style="left: 75%;">
+            <div class="center-line"></div>
+            <div class="center-circle"></div>
+        </div>
+        <div class="pokeball variant-3" style="left: 85%;">
+            <div class="center-line"></div>
+            <div class="center-circle"></div>
+        </div>
+        <div class="pokeball variant-4" style="left: 95%;">
+            <div class="center-line"></div>
+            <div class="center-circle"></div>
+        </div>
+    </div>
+
+    <div class="container" id="mainContent" style="display: none;">
+
+        <!-- Main invitation graphic -->
+        <div class="invitation-card">
+            <img src="PG1.svg" alt="Baby Shower Invitation" class="invitation-image">
+        </div>
+        
+        <!-- Decorative element -->
+        <div class="decoration">
+            <img src="PG2.svg" alt="Decorative element" class="decoration-image">
+        </div>
+        
+        <!-- Event details summary -->
+        <div class="event-details">
+            <h2>Baby Shower for Susan & Chris</h2>
+            <p class="date">Sunday, August 3rd, 2025 from 4:00 PM to 9:00 PM</p>
+            <p class="note">We can't wait to celebrate with you!</p>
+        </div>
+        
+        <!-- Action buttons -->
+        <div class="action-buttons">
+            <a href="https://my.babylist.com/susan-and-chris-bui-harris" 
+               class="button registry-button" 
+               target="_blank" 
+               rel="noopener noreferrer">
+                View Registry
+            </a>
+            
+            <a href="#" 
+               class="button rsvp-button" 
+               id="rsvpButton">
+                RSVP
+            </a>
+            
+            <a href="https://maps.app.goo.gl/jZNXMN4xiCY8SDcK9" 
+               class="button location-button" 
+               target="_blank" 
+               rel="noopener noreferrer">
+                Event Location
+            </a>
+        </div>
+    </div>
+
+    <!-- RSVP Modal -->
+    <div id="rsvpModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>RSVP to Our Baby Shower</h3>
+            <p>Please let us know if you can join us for this special celebration!</p>
+            
+            <form id="rsvpForm" class="rsvp-form">
+                <div class="form-group">
+                    <label for="guestName">Your Name *</label>
+                    <input type="text" id="guestName" name="guestName" required placeholder="Enter your full name">
+                </div>
+
+                <div class="form-group">
+                    <label for="attendance">Will you attend? *</label>
+                    <select id="attendance" name="attendance" required>
+                        <option value="">Please select...</option>
+                        <option value="Yes, I'll be there">Yes, I'll be there</option>
+                        <option value="Sorry, can't make it">Sorry, can't make it</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="adults">How many adults will you bring?</label>
+                    <select id="adults" name="adults">
+                        <option value="Just me">Just me</option>
+                        <option value="1">1 additional adult</option>
+                        <option value="2">2 additional adults</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="kids">How many kids will you bring?</label>
+                    <select id="kids" name="kids">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="dogs">How many dogs will you bring?</label>
+                    <select id="dogs" name="dogs">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                    </select>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="button submit-button">Send RSVP</button>
+                    <div id="loadingSpinner" class="loading-spinner" style="display: none;">
+                        <div class="spinner"></div>
+                        <span>Sending...</span>
+                    </div>
+                </div>
+            </form>
+
+            <div id="successMessage" class="success-message" style="display: none;">
+                <div class="success-icon">✓</div>
+                <h4>Thank you for your RSVP!</h4>
+                <p>We've received your response and can't wait to celebrate with you!</p>
+            </div>
+
+            <div id="errorMessage" class="error-message" style="display: none;">
+                <div class="error-icon">✗</div>
+                <h4>Oops! Something went wrong</h4>
+                <p>Please try again or contact us directly.</p>
+                <button type="button" class="button retry-button" onclick="resetForm()">Try Again</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
