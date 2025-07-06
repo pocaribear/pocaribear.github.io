@@ -28,9 +28,16 @@ body {
     z-index: 2;
 }
 
+@media (max-width: 768px) {
+    .container {
+        padding: 0;
+        max-width: 100%;
+    }
+}
+
 /* Invitation card */
 .invitation-card {
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     background: transparent;
     border-radius: 15px;
     box-shadow: none;
@@ -46,11 +53,29 @@ body {
     max-width: 100%;
     height: auto;
     border-radius: 10px;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    will-change: transform;
+}
+
+@media (max-width: 768px) {
+    .invitation-card {
+        margin-bottom: 10px;
+        padding: 0;
+    }
+    
+    .invitation-image {
+        border-radius: 0;
+        width: 100vw;
+        max-width: none;
+    }
 }
 
 /* Decoration */
 .decoration {
-    margin: 30px 0;
+    margin: 15px 0;
     background: transparent;
     border-radius: 15px;
     box-shadow: none;
@@ -72,6 +97,19 @@ body {
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
     will-change: transform;
+}
+
+@media (max-width: 768px) {
+    .decoration {
+        margin: 10px 0;
+        padding: 0;
+    }
+    
+    .decoration-image {
+        border-radius: 0;
+        width: 100vw;
+        max-width: none;
+    }
 }
 
 /* Action buttons */
