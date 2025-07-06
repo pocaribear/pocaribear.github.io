@@ -123,8 +123,11 @@ body {
 }
 
 .button {
-    display: inline-block;
-    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    padding: 0 30px;
     text-decoration: none;
     border-radius: 8px;
     font-family: 'Poppins', 'Arial', sans-serif;
@@ -133,10 +136,9 @@ body {
     transition: all 0.3s ease;
     cursor: pointer;
     border: 3px solid transparent;
-    flex: 1;
+    flex: 1 1 auto;
     max-width: 250px;
     min-width: 200px;
-    text-align: center;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -538,6 +540,20 @@ body {
 
 /* Responsive form styles */
 @media (max-width: 768px) {
+    .action-buttons {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 250px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .button {
+        width: 100%;
+        min-width: 100%;
+    }
+
     .modal {
         padding: 10px 0;
     }
