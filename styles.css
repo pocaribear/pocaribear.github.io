@@ -63,11 +63,13 @@ body {
     transform: translateZ(0);
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
-    shape-rendering: geometricPrecision;
-    text-rendering: geometricPrecision;
-    image-rendering: optimizeQuality;
-    -webkit-font-smoothing: antialiased;
+    shape-rendering: crispEdges;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: subpixel-antialiased;
     -moz-osx-font-smoothing: grayscale;
+    vector-effect: non-scaling-stroke;
 }
 
 @media (max-width: 768px) {
@@ -113,11 +115,13 @@ body {
     transform: translateZ(0);
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
-    shape-rendering: geometricPrecision;
-    text-rendering: geometricPrecision;
-    image-rendering: optimizeQuality;
-    -webkit-font-smoothing: antialiased;
+    shape-rendering: crispEdges;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: subpixel-antialiased;
     -moz-osx-font-smoothing: grayscale;
+    vector-effect: non-scaling-stroke;
 }
 
 @media (max-width: 768px) {
