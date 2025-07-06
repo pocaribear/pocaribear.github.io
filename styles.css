@@ -90,6 +90,15 @@ body {
         width: 100%;
         max-width: none;
         display: block;
+        transform: none;
+        -webkit-transform: none;
+        will-change: transform;
+        shape-rendering: auto;
+        image-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        perspective: 1000px;
     }
 }
 
@@ -142,6 +151,15 @@ body {
         width: 100%;
         max-width: none;
         display: block;
+        transform: none;
+        -webkit-transform: none;
+        will-change: transform;
+        shape-rendering: auto;
+        image-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        perspective: 1000px;
     }
 }
 
@@ -660,11 +678,23 @@ body {
     }
 }
 
-/* Fix for iOS Safari viewport issues */
+/* Fix for iOS Safari viewport and rendering issues */
 @supports (-webkit-touch-callout: none) {
     .modal {
         height: 100vh;
         height: -webkit-fill-available;
+    }
+    
+    .invitation-image,
+    .decoration-image {
+        transform: translateZ(0);
+        -webkit-transform: translateZ(0);
+        mask-image: radial-gradient(white, black);
+        -webkit-mask-image: -webkit-radial-gradient(white, black);
+        filter: blur(0);
+        -webkit-filter: blur(0);
+    }
+}
     }
     
     .modal-content {
