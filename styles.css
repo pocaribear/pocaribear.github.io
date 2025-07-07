@@ -499,7 +499,7 @@ body {
 /* Success Message */
 .success-message {
     text-align: center;
-    padding: 20px;
+    padding: 20px 20px 40px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -509,10 +509,21 @@ body {
 }
 
 .success-message img {
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: auto;
     object-fit: contain;
     animation: successPulse 0.6s ease-out;
+    margin: 10px 0 0 -10px;
+}
+
+.success-message h1 {
+    color: #E3674E;
+    font-family: 'Poppins', 'Arial', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center !important;
+    margin: 30px 0 0 0;
+    line-height: 1.2;
 }
 
 .success-message h3 {

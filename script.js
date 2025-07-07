@@ -160,17 +160,22 @@ document.addEventListener('DOMContentLoaded', function() {
     function showSuccessMessage() {
         rsvpForm.style.display = 'none';
         loadingSpinner.style.display = 'none';
+        // Hide the modal header elements
+        const modalHeader = document.querySelector('.modal-header');
+        const modalSubtext = document.querySelector('.modal-subtext');
+        if (modalHeader) modalHeader.style.display = 'none';
+        if (modalSubtext) modalSubtext.style.display = 'none';
         successMessage.innerHTML = `
             <img src="Pikachu.svg" alt="Pikachu success" />
-            <h3>Thank you for your RSVP</h3>
+            <h1>Thank you<br>for your RSVP!</h1>
             <p>We've received your response and can't wait to celebrate with you!</p>
         `;
         successMessage.style.display = 'block';
         
-        // Auto-close modal after 3 seconds
+        // Auto-close modal after 10 seconds
         setTimeout(() => {
             closeModal();
-        }, 3000);
+        }, 10000);
     }
 
     function showErrorMessage() {
@@ -192,6 +197,11 @@ document.addEventListener('DOMContentLoaded', function() {
         errorMessage.style.display = 'none';
         loadingSpinner.style.display = 'none';
         submitButton.style.display = 'inline-block';
+        // Show the modal header elements again
+        const modalHeader = document.querySelector('.modal-header');
+        const modalSubtext = document.querySelector('.modal-subtext');
+        if (modalHeader) modalHeader.style.display = 'block';
+        if (modalSubtext) modalSubtext.style.display = 'block';
         rsvpForm.reset();
     };
 
