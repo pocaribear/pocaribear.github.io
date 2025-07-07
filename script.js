@@ -160,7 +160,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function showSuccessMessage() {
         rsvpForm.style.display = 'none';
         loadingSpinner.style.display = 'none';
-        successMessage.innerHTML = '<img src="Pikachu.svg" alt="Pikachu success" />';
+        successMessage.innerHTML = '<img src="Pikachu.svg" alt="Pikachu success" /><p>Thank you for your response!</p>';
         successMessage.style.display = 'block';
         
         // Auto-close modal after 3 seconds
