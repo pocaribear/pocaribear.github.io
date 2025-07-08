@@ -303,21 +303,18 @@ body {
 
 .modal-content {
     background-color: white;
-    margin: 0 auto;
+    margin: 20px auto;
     padding: 30px;
     border-radius: 15px;
     width: 90%;
     max-width: 500px;
     position: relative;
     animation: slideIn 0.3s ease;
-    max-height: 90vh;
-    max-height: calc(-webkit-fill-available - 40px);
+    max-height: calc(100vh - 40px);
     overflow-y: auto;
-    overflow-x: hidden;
     box-sizing: border-box;
     scrollbar-width: thin;
     scrollbar-color: #E3674E #f1f1f1;
-    transform: translateY(0);
 }
 
 .modal-content::-webkit-scrollbar {
@@ -516,23 +513,21 @@ body {
 /* Success Message */
 .success-message {
     text-align: center;
-    padding: 20px;
+    padding: 20px 20px 40px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 15px;
+    gap: 20px;
     height: 100%;
-    width: 100%;
-    overflow: hidden;
 }
 
 .success-message img {
-    width: 150px;
+    width: 200px;
     height: auto;
     object-fit: contain;
     animation: successPulse 0.6s ease-out;
-    margin: 0;
+    margin: 10px 0 0 -10px;
 }
 
 .success-message h1 {
@@ -646,31 +641,15 @@ body {
     }
 
     .modal {
-        padding: 0;
-        height: 100%;
-        min-height: -webkit-fill-available;
+        padding: 10px 0;
     }
     
     .modal-content {
-        margin: auto;
-        width: 92%;
-        max-height: 80vh;
-        max-height: calc(-webkit-fill-available - 40px);
+        margin: 10px auto;
+        width: 95%;
+        max-height: calc(100vh - 20px);
         overflow-y: auto;
-        overflow-x: hidden;
-        padding: 20px 15px;
-        position: relative;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-    
-    .success-message {
-        padding: 10px;
-    }
-    
-    .success-message img {
-        width: 120px;
-        height: auto;
+        padding: 20px;
     }
     
     .form-group input,
