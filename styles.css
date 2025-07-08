@@ -513,13 +513,17 @@ body {
 /* Success Message */
 .success-message {
     text-align: center;
-    padding: 20px 20px 40px;
+    padding: 20px 0 40px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 20px;
     height: 100%;
+    width: 100%;
+    position: relative;
+    left: 0;
+    overflow: hidden;
 }
 
 .success-message img {
@@ -530,6 +534,10 @@ body {
     margin: 10px auto;
     max-width: 100%;
     display: block;
+    position: relative;
+    left: 0;
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
 }
 
 .success-message h1 {
@@ -725,12 +733,45 @@ body {
     .modal {
         height: 100vh;
         height: -webkit-fill-available;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .modal-content {
+        width: 100%;
+        max-width: 100%;
+        margin: 20px 0;
+        padding: 20px 0;
+        overflow: hidden;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+    }
+    
+    .success-message {
+        width: 100%;
+        padding: 20px 0;
+        overflow: hidden;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+    }
+    
+    .success-message img {
+        width: 120px;
+        height: auto;
+        margin: 0 auto;
+        display: block;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        -webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
     }
     
     .invitation-image,
     .decoration-image,
-    .location-button img,
-    .success-message img {
+    .location-button img {
         transform: translateZ(0);
         -webkit-transform: translateZ(0);
         -webkit-perspective: 1000;

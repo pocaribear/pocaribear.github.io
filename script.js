@@ -166,7 +166,9 @@ document.addEventListener('DOMContentLoaded', function() {
         if (modalHeader) modalHeader.style.display = 'none';
         if (modalSubtext) modalSubtext.style.display = 'none';
         successMessage.innerHTML = `
-            <img src="Pikachu.svg" alt="Pikachu success" />
+            <div style="width: 100%; position: relative; overflow: hidden;">
+                <img src="Pikachu.svg" alt="Pikachu success" style="transform: translateX(0); -webkit-transform: translateX(0);" />
+            </div>
             <h1>Thank you<br>for your RSVP!</h1>
             <p>We've received your response and can't wait to celebrate with you!</p>
         `;
