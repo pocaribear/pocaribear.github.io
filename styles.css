@@ -98,12 +98,12 @@ body {
         width: 100%;
         max-width: none;
         display: block;
-        transform: none;
-        -webkit-transform: none;
+        transform: translateZ(0);
+        -webkit-transform: translateZ(0);
         will-change: transform;
-        shape-rendering: auto;
-        image-rendering: auto;
-        -webkit-font-smoothing: antialiased;
+        shape-rendering: geometricPrecision;
+        text-rendering: geometricPrecision;
+        -webkit-font-smoothing: subpixel-antialiased;
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
         perspective: 1000px;
@@ -157,12 +157,12 @@ body {
         width: 100%;
         max-width: none;
         display: block;
-        transform: none;
-        -webkit-transform: none;
+        transform: translateZ(0);
+        -webkit-transform: translateZ(0);
         will-change: transform;
-        shape-rendering: auto;
-        image-rendering: auto;
-        -webkit-font-smoothing: antialiased;
+        shape-rendering: geometricPrecision;
+        text-rendering: geometricPrecision;
+        -webkit-font-smoothing: subpixel-antialiased;
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
         perspective: 1000px;
@@ -716,26 +716,51 @@ body {
     }
     
     .invitation-image,
-    .decoration-image {
+    .decoration-image,
+    .location-button img,
+    .success-message img {
         transform: translateZ(0);
         -webkit-transform: translateZ(0);
         -webkit-perspective: 1000;
+        perspective: 1000;
         -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
         transform-style: preserve-3d;
         filter: blur(0);
         -webkit-filter: blur(0);
     }
 
+    /* Specific handling for PNG images */
+    .location-button img,
+    .success-message img {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: -moz-crisp-edges;
+        image-rendering: crisp-edges;
+        -ms-interpolation-mode: nearest-neighbor;
+    }
+
     @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
         .invitation-image,
         .decoration-image {
-            image-rendering: auto;
-            -webkit-font-smoothing: antialiased;
+            image-rendering: optimizeQuality;
+            -webkit-font-smoothing: subpixel-antialiased;
+            transform: translateZ(0) scale(1.0);
+            -webkit-transform: translateZ(0) scale(1.0);
+            backface-visibility: hidden;
+            perspective: 1000;
+        }
+        
+        .location-button img,
+        .success-message img {
+            transform: scale(0.5);
+            transform-origin: center center;
+            image-rendering: pixelated;
+            max-width: none;
+            width: 200%;
+            height: 200%;
         }
     }
-}
-    }
-    
+
     .modal-content {
         max-height: calc(100vh - 40px);
         max-height: calc(-webkit-fill-available - 40px);
